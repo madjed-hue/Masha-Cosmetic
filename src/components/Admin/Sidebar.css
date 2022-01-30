@@ -1,0 +1,21 @@
+.sidebar {
+  background-color: transparent;
+}
+.logoImg {
+  width: 20vmax;
+  object-fit: contain;
+}
+.side__list {
+  background-color: transparent !important;
+}
+.side__list > div {
+  margin: 15px 0;
+}
+.side__list svg {
+  color: #fff;
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  border-radius: 25%;
+}

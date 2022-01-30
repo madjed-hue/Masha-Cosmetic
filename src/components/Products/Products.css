@@ -1,0 +1,57 @@
+.card {
+  width: 20vmax;
+  margin: 1vmax 0;
+  position: relative;
+  cursor: pointer;
+}
+.MuiPaper-root img {
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+.MuiPaper-root:hover > img {
+  transform: scale(1.1);
+}
+.MuiCardHeader-root .MuiCardHeader-avatar .MuiAvatar-root img {
+  width: 100%;
+}
+.collpase {
+  position: relative;
+}
+.dialog .MuiDialog-container > div {
+  width: 18vmax;
+}
+.submitDialog {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.submitDialog > svg {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.submitDialog .facebook {
+  color: #3b5998;
+}
+.submitDialog .instagram {
+  color: #8a3ab9;
+}
+.submitDialog .twitter {
+  color: #00acee;
+}
+.submitDialog .linkedin {
+  color: #0e76a8;
+}
+.submitDialog .mail {
+  color: burlywood;
+}
+.submitDialog .url {
+  color: brown;
+}
+
+@media screen and (max-width: 768px) {
+  .submitDialog > svg {
+    width: 30px;
+    height: 30px;
+  }
+}
