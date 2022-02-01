@@ -12,6 +12,7 @@ import LoginSignUp from "./components/Users/LoginSignUp";
 import UserOptions from "./components/Users/UserOptions";
 import Dashboard from "./components/Admin/Dashboard.js";
 import { ReactNotifications } from "react-notifications-component";
+import Tables from "./components/Admin/Tables";
 
 function App() {
   const [selectedOption, setSelectedOption] = useState(Data.fetchProducts);
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/products/:id" element={<SigleProduct />} />
           <Route path="/login" exact element={<LoginSignUp />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
+          <Route path="/dashboard/tables" exact element={<Tables />} />
         </Routes>
       </div>
     </BrowserRouter>

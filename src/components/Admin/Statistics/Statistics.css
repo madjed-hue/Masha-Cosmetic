@@ -1,0 +1,64 @@
+.statistics__container {
+  display: flex;
+  margin: 1vmax auto;
+}
+.statistics__container .card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2vmax;
+  align-items: center;
+  background-color: tomato;
+  padding: 0.5vmax;
+  border-radius: 10px;
+  color: #fff;
+  flex: 1;
+}
+.statistics__container .card h5 {
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.statistics__container .card span {
+  font-size: 0.875rem;
+  color: rgb(109 249 199);
+}
+.statistics__container .card .big {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 5px;
+  color: #fff;
+}
+.statistics__container .icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8vmax;
+}
+
+.statistics__container .icon > svg {
+  color: tomato;
+  width: 28px;
+  height: 28px;
+}
+@media screen and (max-width: 768px) {
+  .statistics__container {
+    display: flex;
+    margin: 1vmax auto;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 425px) {
+  .statistics__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .statistics__container > div {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+  }
+}

@@ -1,0 +1,173 @@
+.admin__banner .banner__container {
+  display: flex;
+}
+.admin__banner .banner__container > div {
+  margin: 0 0.5vmax;
+  height: 18vmax;
+}
+.admin__banner .banner__container .banner__left {
+  position: relative;
+  overflow: hidden;
+  flex: 0.4;
+}
+.bannerLeft__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.bannerLeft__info > p {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.bannerLeft__info > p > span {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.bannerLeft__info > p:hover span {
+  transform: translateX(7px);
+}
+.admin__banner .banner__container .banner__left > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.rest__banner {
+  display: flex;
+  justify-content: space-around;
+  flex: 0.6;
+}
+.admin__banner .banner__container .banner__middle {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
+}
+.banner__middle .face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8vmax;
+  background-color: tomato;
+  width: 4vmax;
+  margin: 10px auto 0;
+  border-radius: 50%;
+}
+.banner__middle .face > svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+.percentage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.percent {
+  background-color: tomato;
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 25px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.percentage > img {
+  width: 10vmax;
+  position: absolute;
+  top: -6vmax;
+  z-index: 0;
+}
+.middle__p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.middle__p p:first-child {
+  font-size: 1.875rem;
+}
+.middle__p p:last-child {
+  font-size: 0.8rem;
+}
+
+.banner__middle > h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.admin__banner .banner__container .banner__right {
+  flex: 0.6;
+  margin-left: 1vmax;
+}
+.banner__right .upper__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner__right .upper__banner svg {
+  width: 35px;
+  height: 35px;
+  background-color: tomato;
+  border-radius: 10px;
+  padding: 2px;
+}
+.admin__banner .banner__container .banner__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("https://www.transparenttextures.com/patterns/wall-4-light.png");
+}
+.banner__right .bottom__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner__right .bottom__banner .invites__bonus {
+  flex: 0.6;
+}
+.banner__right .bottom__banner .safety {
+  flex: 0.4;
+  text-align: center;
+}
+.banner__right .bottom__banner .invites__bonus > div {
+  margin: 1vmax 0;
+  background-color: tomato;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.admin__banner .banner__container .banner__left,
+.admin__banner .banner__container .banner__middle,
+.admin__banner .banner__container .banner__right {
+  color: #fff;
+  background-color: #ff6347bf;
+  border-radius: 2vmax;
+  padding: 1vmax 2vmax;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .admin__banner .banner__container {
+    flex-direction: column;
+  }
+  .admin__banner .banner__container > div {
+    margin: 1vmax;
+  }
+  .admin__banner .banner__container .rest__banner > div {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 425px) {
+  .admin__banner .banner__container .rest__banner {
+    flex-direction: column;
+  }
+  .admin__banner .banner__container .rest__banner > div {
+    margin: 1vmax;
+  }
+}

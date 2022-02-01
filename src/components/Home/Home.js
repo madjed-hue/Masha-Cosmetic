@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Banner from "../Banner/Banner";
+import Banner from "../HomeBanner/Banner";
 import Loader from "../Loader/Loader";
 import Products from "../Products/Products";
 import "./Home.css";

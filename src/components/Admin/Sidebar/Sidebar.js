@@ -7,9 +7,28 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
 import CategoryIcon from "@mui/icons-material/Category";
+import GroupIcon from "@mui/icons-material/Group";
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  function navigateDashboard() {
+    navigate("/dashboard");
+  }
+  function navigateTables() {
+    navigate("/dashboard/tables");
+  }
+  function navigateBilling() {
+    navigate("/dashboard/billing");
+  }
+  function navigateProducts() {
+    navigate("/dashboard/products");
+  }
+  function navigateUsers() {
+    navigate("/dashboard/users");
+  }
+
   return (
     <div className="sidebar">
       <List
@@ -18,29 +37,55 @@ const Sidebar = () => {
         aria-labelledby="nested-list-subheader"
         className="side__list"
       >
-        <ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            navigateDashboard();
+          }}
+        >
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            navigateTables();
+          }}
+        >
           <ListItemIcon>
             <BarChartIcon />
           </ListItemIcon>
           <ListItemText primary="Tables" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            navigateBilling();
+          }}
+        >
           <ListItemIcon>
             <PaymentIcon />
           </ListItemIcon>
           <ListItemText primary="Billing" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            navigateProducts();
+          }}
+        >
           <ListItemIcon>
             <CategoryIcon />
           </ListItemIcon>
           <ListItemText primary="Products" />
+        </ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            navigateUsers();
+          }}
+        >
+          <ListItemIcon>
+            <GroupIcon />
+          </ListItemIcon>
+          <ListItemText primary="Users" />
         </ListItemButton>
         {/* <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>

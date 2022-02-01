@@ -1,6 +1,88 @@
 .dashboard {
-  width: 100vw;
-  height: 100vh;
-
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
   padding: 6vmax 1vmax;
+}
+.dashboard__container {
+  display: flex;
+  width: 100%;
+}
+.dashboard__container .leftSide {
+  flex: 0.2;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard__container .rightSide {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard__iconToggle {
+  position: relative;
+  z-index: 4;
+}
+
+.mobile__dash {
+  position: absolute;
+  background-color: #fff;
+  left: -200px;
+}
+.charts {
+  display: flex;
+}
+.lineChart {
+  width: 50vmax;
+  margin: auto;
+}
+
+.doughnutChart {
+  width: 30vmax;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .charts {
+    flex-direction: column;
+  }
+  .lineChart {
+    width: 40vmax;
+    margin: auto;
+  }
+  .doughnutChart {
+    width: 40vmax;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  .dashboard {
+    width: 100vw;
+    height: 100%;
+    background-image: none;
+  }
+  .dash__sidebar {
+    display: none;
+  }
+  .mobile__dash.open {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+  }
+  .dashboard__iconToggle {
+    position: fixed;
+  }
+  .dashboard__iconToggle > svg {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: #fff;
+    z-index: 2;
+    top: 3vmax;
+    right: -2vmax;
+    cursor: pointer;
+  }
+  .dashboard__iconToggle > svg.open {
+    top: 3vmax;
+    right: -15vmax;
+  }
 }
