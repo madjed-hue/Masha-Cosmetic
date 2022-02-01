@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AdminBanner from "./AdminBanner/AdminBanner";
 import BreadCrumbs from "./Breadcrumbs/BreadCrumbs";
-import { Doughnut, Line } from "react-chartjs-2";
+import { Doughnut, Line, Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import "./Dashboard.css";
 import Sidebar from "./Sidebar/Sidebar";
@@ -10,6 +10,7 @@ import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOu
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
+  const mobDashRef = useRef();
   const arrNumb = Array.from(Array(12).keys());
   const date = new Date();
   const theYear = date.getFullYear();
@@ -17,6 +18,10 @@ const Dashboard = () => {
   const updateWidth = () => {
     setWidth(window.screen.width);
   };
+  const handleOpenMenu = () => {
+    setOpen(!open);
+  };
+
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
   }, []);
@@ -24,6 +29,10 @@ const Dashboard = () => {
   const myArrayNumb = arrNumb.map((number) => {
     return (number = Math.ceil(Math.random() * number * 1000));
   });
+  const newArrayNumb = arrNumb.map((number) => {
+    return (number = Math.floor(Math.random() * number * 1000));
+  });
+
   const options = {
     responsive: true,
   };
@@ -63,6 +72,21 @@ const Dashboard = () => {
       },
     ],
   };
+  const barState = {
+    labels,
+    datasets: [
+      {
+        label: "Dataset 1",
+        data: myArrayNumb,
+        backgroundColor: "#750550",
+      },
+      {
+        label: "Dataset 2",
+        data: newArrayNumb,
+        backgroundColor: "#064663",
+      },
+    ],
+  };
   return (
     <div className="dashboard">
       <div className="dashboard__container">
@@ -74,8 +98,14 @@ const Dashboard = () => {
             <Sidebar />
           </div>
           <div className="dashboard__iconToggle">
-            <ArrowCircleRightOutlinedIcon />
-            <div className="mobile__dash">
+            <ArrowCircleRightOutlinedIcon
+              onClick={() => handleOpenMenu()}
+              className={`${open ? "open" : ""}`}
+            />
+            <div
+              className={`mobile__dash ${open ? "open" : ""}`}
+              ref={mobDashRef}
+            >
               <Sidebar />
             </div>
           </div>
@@ -97,6 +127,9 @@ const Dashboard = () => {
             <div className="doughnutChart">
               <Doughnut data={doughnutState} />
             </div>
+          </div>
+          <div className="bar__chart">
+            <Bar options={options} data={barState} />
           </div>
         </div>
       </div>

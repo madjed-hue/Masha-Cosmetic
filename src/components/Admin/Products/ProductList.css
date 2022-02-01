@@ -1,0 +1,9 @@
+.img__container {
+  width: 100%;
+  text-align: center;
+}
+.productList__img {
+  width: 50px;
+  height: 65px;
+  object-fit: cover;
+}

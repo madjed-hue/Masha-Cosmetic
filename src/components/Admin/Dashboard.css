@@ -1,7 +1,6 @@
 .dashboard {
   width: 100%;
   height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
   padding: 6vmax 1vmax;
 }
 .dashboard__container {
@@ -21,6 +20,7 @@
 .dashboard__iconToggle {
   position: relative;
   z-index: 4;
+  display: none;
 }
 
 .mobile__dash {
@@ -70,6 +70,7 @@
   }
   .dashboard__iconToggle {
     position: fixed;
+    display: block;
   }
   .dashboard__iconToggle > svg {
     position: absolute;
@@ -78,11 +79,11 @@
     background: #fff;
     z-index: 2;
     top: 3vmax;
-    right: -2vmax;
+    right: -3vmax;
     cursor: pointer;
   }
   .dashboard__iconToggle > svg.open {
     top: 3vmax;
-    right: -15vmax;
+    right: -23vmax;
   }
 }

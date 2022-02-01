@@ -9,7 +9,7 @@ const BreadCrumbs = () => {
   const location = useLocation();
   const { pathname } = location;
   const pathnames = pathname.split("/").filter((x) => x);
-  console.log(pathnames);
+  // console.log(pathnames);
   function navigateDashboard() {
     navigate("/dashboard");
   }
