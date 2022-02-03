@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import Banner from "../HomeBanner/Banner";
 import Loader from "../Loader/Loader";
 import Products from "../Products/Products";
+import donats from "../../images/illustrrations/Torus_X3_-_Thick0000.png";
+import donatsBlack from "../../images/illustrrations/Torus_X3_-_Thick0009.png";
 import "./Home.css";
 
 const Home = () => {
@@ -24,6 +26,28 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
+          <div className="shape">
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+            <img src={donats} alt="one" />
+          </div>
+          <div className="shapeTwo">
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+            <img src={donatsBlack} alt="one" />
+          </div>
           <div className="home">
             <Banner />
             <div className="home__container" id="home__container">

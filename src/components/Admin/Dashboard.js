@@ -35,6 +35,8 @@ const Dashboard = () => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 2,
   };
   const labels = [
     "January",

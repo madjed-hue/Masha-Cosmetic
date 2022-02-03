@@ -1,3 +1,28 @@
+.shape,
+.shapeTwo {
+  max-width: 250px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transform: rotate3d(1, 1, 1, 45deg);
+  z-index: 0;
+}
+.shape {
+  right: 10%;
+  top: 2%;
+}
+.shapeTwo {
+  left: 10%;
+  bottom: 2%;
+}
+.shape > img,
+.shapeTwo > img {
+  width: 30%;
+  object-fit: contain;
+}
 .home__container {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +31,7 @@
   justify-content: space-evenly;
 }
 .banner {
-  background-image: url("../../images/cover.jpg");
+  /* background-image: url("../../images/cover.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,19 +75,20 @@
   color: white;
 }
 
-.banner::after {
-  content: "";
-  width: 100vw;
-  height: 100vmin;
-  background-color: #ffffff;
-  position: absolute;
-  top: 0%;
-  left: 0;
-  clip-path: polygon(100% 68%, 0 100%, 100% 100%);
-  max-width: 100%;
-}
 @media screen and (max-width: 1024px) {
   .home__container {
     justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shapeTwo {
+    left: 10%;
+    bottom: 43%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .shape,
+  .shapeTwo {
+    display: none;
   }
 }
