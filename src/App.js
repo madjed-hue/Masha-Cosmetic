@@ -13,6 +13,7 @@ import UserOptions from "./components/Users/UserOptions";
 import Dashboard from "./components/Admin/Dashboard.js";
 import { ReactNotifications } from "react-notifications-component";
 import Tables from "./components/Admin/Tables/Tables";
+import Billing from "./components/Admin/Billing/Billing";
 
 function App() {
   const [selectedOption, setSelectedOption] = useState(Data.fetchProducts);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/login" exact element={<LoginSignUp />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
           <Route path="/dashboard/tables" exact element={<Tables />} />
+          <Route path="/dashboard/billing" exact element={<Billing />} />
         </Routes>
       </div>
     </BrowserRouter>

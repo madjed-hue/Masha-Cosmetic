@@ -11,7 +11,7 @@ const BreadCrumbs = () => {
   const pathnames = pathname.split("/").filter((x) => x);
   // console.log(pathnames);
   function navigateDashboard() {
-    navigate("/dashboard");
+    navigate("/");
   }
 
   return (
@@ -36,7 +36,7 @@ const BreadCrumbs = () => {
               sx={{ display: "flex", alignItems: "center" }}
               color="inherit"
               onClick={() => {
-                navigate(`/dashboard/${name}`);
+                navigate(`/${name}`);
               }}
             >
               {name}
@@ -44,51 +44,6 @@ const BreadCrumbs = () => {
           );
         })}
       </Breadcrumbs>
-
-      {/* <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          onClick={() => {
-            navigateTables();
-          }}
-        >
-          <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Tables
-        </Link>
-        <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          onClick={() => {
-            navigateBilling();
-          }}
-        >
-          <PaymentIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Billing
-        </Link>
-        <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          onClick={() => {
-            navigateProducts();
-          }}
-        >
-          <CategoryIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Products
-        </Link>
-        <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          onClick={() => {
-            navigateUsers();
-          }}
-        >
-          <GroupIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Users
-        </Link> */}
     </div>
   );
 };

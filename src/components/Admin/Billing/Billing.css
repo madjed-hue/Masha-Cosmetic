@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.billing {
+  height: 100vmin;
+  margin: 5vmax auto;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+.billing__container {
+  display: flex;
+}
+.leftSide {
+  margin-right: 1.5vmax;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.billing_methods {
+  display: flex;
+  flex-wrap: wrap;
+}
+.billing_methods > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.methods {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.7;
+}
+.methods .paypalAndSalary {
+  display: flex;
+  flex: 1;
+}
+
+.billing_methods .methods .card {
+  flex-basis: 50%;
+  max-width: 50%;
+  margin: 1vmax 0;
+  position: relative;
+  cursor: pointer;
+  height: 12vmax;
+}
+.billing_methods .methods .card > img {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
+    rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+  border-radius: 22px;
+}
+.paypalImg {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.cardType {
+  width: 50px;
+  object-fit: contain;
+}
+.salary,
+.paypal {
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  flex-basis: 50%;
+  max-width: 50%;
+  margin: 1vmax;
+  box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
+    rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+}
+.saleryCard {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+.salary .info,
+.paypal .info {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info p {
+  font-size: 13px;
+  color: rgb(123, 128, 154);
+}
+.payment__mehtods {
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0;
+  margin-right: 1vmax;
+  box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
+    rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+}
+.payment__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.payment__banner > button {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.payment__banner > button:hover {
+  box-shadow: rgb(52 71 103 / 40%) 0rem 0.875rem 1.625rem -0.75rem,
+    rgb(52 71 103 / 15%) 0rem 0.25rem 1.4375rem 0rem,
+    rgb(52 71 103 / 20%) 0rem 0.5rem 0.625rem -0.3125rem;
+}
+.payemesnt__cards {
+  display: flex;
+  justify-content: space-between;
+}
+.payemesnt__cards > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.paymentCarrd__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0.7;
+}
+.mastercard,
+.visaCard {
+  border: 1px solid #00000030;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 16px;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+.visaCard {
+  margin: 0;
+}
+.invoices {
+  margin-left: 0;
+  background-color: #f0f2f5 !important;
+}
+.billing__info__transaction {
+  margin-top: 1vmax;
+}
+@media screen and (max-width: 1024px) {
+  .invoices {
+    /* max-width: 100%; */
+    margin-top: 1vmax;
+    margin-right: 1vmax;
+    flex: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .billing_methods {
+    display: flex;
+    flex-direction: column;
+  }
+  .billing_methods > div:first-child {
+    flex: 1;
+  }
+  .methods {
+    display: flex;
+    flex-direction: column;
+  }
+  .methods > div {
+    flex: 1;
+  }
+  .salary .info h4,
+  .paypal .info h4 {
+    margin: 10px 0;
+  }
+  .salary .info p,
+  .paypal .info p {
+    margin: 10px 0;
+  }
+  .salary .info h3,
+  .paypal .info h3 {
+    margin: 10px 0;
+  }
+  .saleryCard {
+    margin: 10px 0;
+  }
+  .salary,
+  .paypal {
+    margin-left: 0;
+  }
+  .billing_methods .methods .card {
+    flex-basis: auto;
+    max-width: 100%;
+    width: 100%;
+    height: 25vmax;
+  }
+  .payment__mehtods {
+    margin: 1vmax;
+    margin-left: 0;
+  }
+  .paymentCarrd__left {
+    flex: 1;
+  }
+  .cardType {
+    width: 30px;
+    object-fit: contain;
+  }
+  .mastercard,
+  .visaCard {
+    margin-right: 10px;
+    padding: 10px;
+  }
+}
