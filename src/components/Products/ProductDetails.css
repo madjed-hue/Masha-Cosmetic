@@ -19,6 +19,7 @@
   padding: 2vmax;
   box-sizing: border-box;
   border: 1px solid white;
+  flex: 1;
 }
 .ProductDetails > div:last-child {
   align-items: flex-start;
