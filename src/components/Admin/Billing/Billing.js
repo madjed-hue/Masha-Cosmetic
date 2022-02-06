@@ -12,6 +12,17 @@ import Sidebar from "../Sidebar/Sidebar";
 import BreadCrumbs from "../Breadcrumbs/BreadCrumbs";
 import InvioceTable from "./InvioceTable";
 import BilingInfo from "./BilingInfo";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import { styled } from "@mui/material/styles";
+import Transaction from "./Transaction";
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  color: theme.palette.text.secondary,
+}));
 
 const Billing = () => {
   const [open, setOpen] = useState(false);
@@ -135,9 +146,22 @@ const Billing = () => {
             </div>
           </div>
           <div className="billing__info__transaction">
-            <div className="billing-info">
-              <BilingInfo />
-            </div>
+            <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={2}>
+                <Grid item sm={12} md={8}>
+                  <Item className="billing-info">
+                    <div>
+                      <BilingInfo />
+                    </div>
+                  </Item>
+                </Grid>
+                <Grid item sm={12} md={4}>
+                  <Item className="billing-info">
+                    <Transaction />
+                  </Item>
+                </Grid>
+              </Grid>
+            </Box>
           </div>
         </div>
       </div>

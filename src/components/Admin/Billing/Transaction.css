@@ -1,0 +1,140 @@
+.transaction {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.first__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.first__box__heading {
+  font-size: 1rem !important;
+  line-height: 1.625;
+  letter-spacing: 0.0075em;
+  text-transform: capitalize;
+  color: rgb(52, 71, 103);
+  font-weight: 600;
+}
+.firstBox__one {
+  display: flex;
+  align-items: center;
+  color: rgb(123, 128, 154);
+}
+.newest {
+  padding: 24px 16px 16px;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+}
+.newest .box__heading {
+  margin-bottom: 16px;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+}
+.newest .box__heading .heading {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.03333em;
+  text-transform: uppercase;
+  color: rgb(123, 128, 154);
+  font-weight: 700;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px !important;
+  margin: 0px !important;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  list-style: none;
+}
+.list__item {
+  padding: 8px 0 8px !important;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.upper__box {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+.left__box {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.leftBox__first {
+  margin-right: 16px;
+  border-radius: 50%;
+}
+.leftBox__first button {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  margin: 0px;
+  cursor: pointer;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 2.375rem;
+  min-width: 2.375rem;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.6875rem 0.6875rem 0.625rem;
+  background-size: 150% !important;
+  background-position-x: 25% !important;
+  background-color: #fff;
+  border: 1px solid rgb(76, 175, 80);
+  color: rgb(76, 175, 80);
+}
+.list__item:first-child .red__button button {
+  color: rgb(244, 67, 53);
+  border: 1px solid rgb(244, 67, 53);
+}
+.list__item:first-child .red__span {
+  color: rgb(244, 67, 53);
+}
+.list__item:last-child .gay__button button {
+  color: rgb(52, 71, 103);
+  border: 1px solid rgb(52, 71, 103);
+}
+.list__item:last-child .gray__span {
+  color: rgb(52, 71, 103);
+}
+
+.leftBox__second {
+  display: flex;
+  flex-direction: column;
+}
+.paltform {
+  margin: 0px 0px 0.35em !important;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  font-weight: 600;
+}
+.theday {
+  margin: 0px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.03333em;
+  font-weight: 400;
+}
+.list__item .right__box {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  font-weight: 600;
+  color: rgb(76, 175, 80);
+}
